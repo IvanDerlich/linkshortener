@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: url_shortener
+    ports:
+      - "30234:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
