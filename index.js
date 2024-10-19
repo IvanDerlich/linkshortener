@@ -35,20 +35,28 @@ app.post("/", async (req, res) => {
     res.json({ originalUrl, shortUrl: `${process.env.HOST}/${shortId}` });
   } catch (error) {
     console.log("error: ", error);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error });
   }
 });
 
 // Route to redirect using the short URL
 app.get("/:shortId", async (req, res) => {
   const { shortId } = req.params;
-  const urlEntry = await Url.findOne({ shortId });
+  try {
+    const urlEntry = await Url.findOne({ shortId });
+    console.log("urlEntry: ", urlEntry);
 
-  if (urlEntry) {
-    return res.redirect(urlEntry.originalUrl);
+    if (urlEntry) {
+      res.json({ orignalUrl: urlEntry.originalUrl });
+    } else {
+      const error = new Error("Short URL not found");
+      error.status = 404;
+      throw error;
+    }
+  } catch (error) {
+    console.log("error: ", error);
+    res.status(error.status || 500).json({ error: error.message });
   }
-
-  res.status(404).json({ error: "Short URL not found" });
 });
 
 mongoose
