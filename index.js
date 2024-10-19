@@ -30,7 +30,6 @@ app.post("/", async (req, res) => {
     const shortId = nanoid(7); // Create a short ID with 7 characters
     const newUrl = new Url({ originalUrl, shortId });
 
-    console.log("host: ", process.env.HOST);
     await newUrl.save();
     res.json({ originalUrl, shortUrl: `${process.env.HOST}/${shortId}` });
   } catch (error) {
@@ -44,7 +43,6 @@ app.get("/:shortId", async (req, res) => {
   const { shortId } = req.params;
   try {
     const urlEntry = await Url.findOne({ shortId });
-    console.log("urlEntry: ", urlEntry);
 
     if (urlEntry) {
       res.json({ orignalUrl: urlEntry.originalUrl });
