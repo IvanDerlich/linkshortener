@@ -10,7 +10,12 @@
   "author": "Ivan Derlich",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "mongoose": "^8.7.2",
+    "nanoid": "^5.0.7"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.7"
   }
 }
