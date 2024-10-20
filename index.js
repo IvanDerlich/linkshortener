@@ -57,12 +57,14 @@ app.get("/:shortId", async (req, res) => {
   }
 });
 
+const port = process.env.PORT || 3000;
+
 mongoose
   .connect(process.env.DATABASE_CONNECTION_STRING)
   .then(() => {
     console.log("Connected to MongoDB");
 
-    app.listen(process.env.PORT, () => {
+    app.listen(port, () => {
       console.log("Server running on http://localhost:3000");
     });
   })
