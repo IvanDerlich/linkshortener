@@ -1,10 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpecs = require("./swagger"); // Import Swagger configuration
 
 const app = express();
 
 app.use(express.json()); // Middleware to parse JSON requests
+
+// Swagger setup
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 const urlSchema = new mongoose.Schema({
   originalUrl: String,
