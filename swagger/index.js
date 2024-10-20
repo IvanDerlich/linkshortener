@@ -1,6 +1,5 @@
 const swaggerJsdoc = require("swagger-jsdoc");
 const docs = require("./docs");
-console.log("docs: ", docs);
 
 const definition = {
   openapi: "3.0.0",
