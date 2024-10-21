@@ -1,11 +1,12 @@
 # URL Shortener
 
 Make long links shorter: 7 characters
-This is the backend. The front is being built
 
-# API specs
+# Useful Links
 
-[Swagger](https://link-shortened-be-a8615336383d.herokuapp.com/api-docs/)
+[API Specs](https://link-shortened-be-a8615336383d.herokuapp.com/api-docs/)
+
+[Frontend Repo](https://github.com/IvanDerlich/url-shortener-frontend)
 
 # Technologies used
 
