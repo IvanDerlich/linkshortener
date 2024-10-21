@@ -5,9 +5,15 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerSpecs = require("./swagger");
 const cors = require("cors");
 
+const corsOptions = {
+  origin: "https://link-shortened-be-a8615336383d.herokuapp.com",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
 const app = express();
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
