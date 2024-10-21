@@ -5,8 +5,21 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerSpecs = require("./swagger");
 const cors = require("cors");
 
+const allowedOrigins = [
+  "https://link-shortened-be-a8615336383d.herokuapp.com",
+  "https://localhost:3000",
+];
+
 const corsOptions = {
-  origin: "https://link-shortened-be-a8615336383d.herokuapp.com",
+  origin: function (origin, callback) {
+    // If no origin is provided (like when requests are from same origin or Postman), allow it
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true); // Allow this origin
+    } else {
+      callback(new Error("Not allowed by CORS")); // Deny the request
+    }
+  },
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
