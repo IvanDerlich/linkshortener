@@ -7,7 +7,7 @@ const cors = require("cors");
 
 const allowedOrigins = [
   "https://link-shortened-be-a8615336383d.herokuapp.com",
-  "https://localhost:3000",
+  "http://localhost:3000",
 ];
 
 const corsOptions = {
