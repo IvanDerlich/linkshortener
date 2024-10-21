@@ -6,9 +6,8 @@ const swaggerSpecs = require("./swagger");
 const cors = require("cors");
 
 const allowedOrigins = [
+  // The api docs will be accessible from these origins to send requests
   "https://link-shortened-be-a8615336383d.herokuapp.com",
-  "http://localhost:3000",
-  "https://shortenivanderlich.netlify.app",
   "https://shorten.ivanderlich.com",
 ];
 
