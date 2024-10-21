@@ -7,10 +7,6 @@ This is the backend. The front is being built
 
 [Swagger](https://link-shortened-be-a8615336383d.herokuapp.com/api-docs/#/URL%20Shortening/get__shortId_)
 
-# Advice
-
-- Don't add a build script in package.json because it breaks the deployment
-
 # Technologies used
 
 - Node.js
