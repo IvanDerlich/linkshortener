@@ -2,7 +2,7 @@
 
 Make long links shorter: 7 characters
 
-# [Live Version](shorten.ivanderlich.com)
+# [Live Version](https://shorten.ivanderlich.com)
 
 # Useful Links
 
