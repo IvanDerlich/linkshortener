@@ -9,6 +9,7 @@ const allowedOrigins = [
   "https://link-shortened-be-a8615336383d.herokuapp.com",
   "http://localhost:3000",
   "https://magical-mousse-35696f.netlify.app",
+  "shorten.ivanderlich.com",
 ];
 
 const corsOptions = {
