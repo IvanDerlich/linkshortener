@@ -9,7 +9,7 @@ const allowedOrigins = [
   "https://link-shortened-be-a8615336383d.herokuapp.com",
   "http://localhost:3000",
   "https://shortenivanderlich.netlify.app",
-  "shorten.ivanderlich.com",
+  "https://shorten.ivanderlich.com",
 ];
 
 const corsOptions = {
