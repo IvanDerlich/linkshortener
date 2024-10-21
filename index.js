@@ -72,7 +72,7 @@ app.get("/:shortId", async (req, res) => {
     const urlEntry = await Url.findOne({ shortId });
 
     if (urlEntry) {
-      res.json({ orignalUrl: urlEntry.originalUrl });
+      res.json({ originalUrl: urlEntry.originalUrl });
     } else {
       const error = new Error("Short URL not found");
       error.status = 404;
