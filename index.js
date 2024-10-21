@@ -59,7 +59,10 @@ app.post("/", async (req, res) => {
     const newUrl = new Url({ originalUrl, shortId });
 
     await newUrl.save();
-    res.json({ originalUrl, shortUrl: `${process.env.HOST}/${shortId}` });
+    res.json({
+      originalUrl,
+      shortUrl: `https://shorten.ivanderlich.com/${shortId}`,
+    });
   } catch (error) {
     console.log("error: ", error);
     res.status(500).json({ error });
