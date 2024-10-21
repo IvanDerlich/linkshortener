@@ -1,6 +1,7 @@
 # URL Shortener
 
 Make long links shorter: 7 characters
+This is the backend. The front is being built
 
 # API specs
 
@@ -9,3 +10,17 @@ Make long links shorter: 7 characters
 # Advice
 
 - Don't add a build script in package.json because it breaks the deployment
+
+# Technologies used
+
+- Node.js
+
+- Express.js
+
+- MongoDB and mongoose
+
+- Swagger
+
+# Author
+
+[Ivan Derlich](ivanderlich.com)
