@@ -52,7 +52,7 @@ app.post("/", async (req, res) => {
     if (existingUrl) {
       return res.json({
         originalUrl,
-        shortUrl: `${process.env.HOST}/${existingUrl.shortId}`,
+        shortUrl: `https://shorten.ivanderlich.com//${existingUrl.shortId}`,
       });
     }
     const shortId = nanoid(7); // Create a short ID with 7 characters
