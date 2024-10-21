@@ -49,8 +49,8 @@ const urlShortenerSwaggerDoc = {
     },
   },
   "/{shortId}": {
-    tags: ["URL Shortening"],
     get: {
+      tags: ["URL Shortening"],
       summary: "Redirect using the shortened URL",
       description:
         "This endpoint accepts a shortened URL and redirects to the original URL.",
