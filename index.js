@@ -9,6 +9,7 @@ const allowedOrigins = [
   // The api docs will be accessible from these origins to send requests
   "https://link-shortened-be-a8615336383d.herokuapp.com",
   "https://shorten.ivanderlich.com",
+  "https://shortenerivanderlich.vercel.app/",
 ];
 
 const corsOptions = {
