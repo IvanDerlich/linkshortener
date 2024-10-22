@@ -4,8 +4,6 @@
 
 # Demo
 
-![](/docs/1.png)
-
 <img src="docs/1.gif" id="main-image-urlshortener" />
 
 # [Live Version](https://shorten.ivanderlich.com)
@@ -15,6 +13,10 @@
 [API Specs](https://link-shortened-be-a8615336383d.herokuapp.com/api-docs/)
 
 [Frontend Repo](https://github.com/IvanDerlich/url-shortener-frontend)
+
+# Front End Demo
+
+<img src="docs/2.gif" />
 
 # Technologies used
 
