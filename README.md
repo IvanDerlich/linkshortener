@@ -1,6 +1,12 @@
 # URL Shortener
 
-Make long links shorter: 7 characters
+<p id="description-urlshortener"> The backend service to make long links reduce to 7 characters <p>
+
+# Demo
+
+![](/docs/1.png)
+
+<img src="docs/1.gif" id="main-image-urlshortener" />
 
 # [Live Version](https://shorten.ivanderlich.com)
 
@@ -12,13 +18,13 @@ Make long links shorter: 7 characters
 
 # Technologies used
 
-- Node.js
-
-- Express.js
-
-- MongoDB and mongoose
-
-- Swagger
+<ul id="tech-list-urlshortener">
+  <li>Node.js</li>
+  <li>Express.js</li>
+  <li>MongoDB</li>
+  <li>Mongoose</li>
+  <li>Swagger</li>
+</ul>
 
 # Author
 

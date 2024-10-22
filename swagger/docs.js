@@ -35,7 +35,7 @@ const urlShortenerSwaggerDoc = {
                   },
                   shortUrl: {
                     type: "string",
-                    example: "http://localhost:3000/abc1234",
+                    example: "http://shorten.ivanderlich.com/abc1234",
                   },
                 },
               },
