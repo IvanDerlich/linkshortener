@@ -33,7 +33,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 // Swagger setup
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
+app.use("/api", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 const urlSchema = new mongoose.Schema({
   originalUrl: String,
@@ -97,7 +97,7 @@ mongoose
     console.log("Connected to MongoDB...");
 
     app.listen(port, () => {
-      console.log("Server running...");
+      console.log("Server running on port " + port);
     });
   })
   .catch((error) => {

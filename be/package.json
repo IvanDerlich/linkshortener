@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js",
-    "comment": "Don't add a build script, it breaks deployment"
+    "build": "echo \"Error: no need for a build script, npm start will suffice\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "author": "Ivan Derlich",
   "license": "ISC",
