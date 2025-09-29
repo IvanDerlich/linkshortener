@@ -10,7 +10,7 @@ function Redirector() {
   useEffect(() => {
     const fetchOriginalUrl = async () => {
       try {
-        const response = await axios.get(`https://localhost:3000/${shortId}`);
+        const response = await axios.get(`http://localhost:3000/${shortId}`);
         let originalUrl = response.data.originalUrl;
 
         // Check if the URL includes 'http://' or 'https://'

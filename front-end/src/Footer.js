@@ -26,7 +26,7 @@ function Footer() {
       <div className={styles.repoLinks}>
         <p>
           <a
-            href="https://localhost:3000/api"
+            href="http://localhost:3000/api"
             target="_blank"
             className={styles.repoLink}
             rel="noreferrer"

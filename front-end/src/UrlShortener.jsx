@@ -10,7 +10,7 @@ function UrlShortener() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://localhost:3000/", {
+      const response = await axios.post("http://localhost:3000/", {
         originalUrl,
       });
       setShortUrl(response.data.shortUrl);
