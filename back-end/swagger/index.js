@@ -10,7 +10,7 @@ const definition = {
   },
   servers: [
     {
-      url: "https://link-shortened-be-a8615336383d.herokuapp.com/",
+      url: "https://localhost:3000/",
     },
   ],
   tags: [

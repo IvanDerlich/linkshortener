@@ -3,32 +3,35 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const swaggerUi = require("swagger-ui-express");
 const swaggerSpecs = require("./swagger");
-const cors = require("cors");
+// const cors = require("cors");
 
-const allowedOrigins = [
-  // The api docs will be accessible from these origins to send requests
-  "https://link-shortened-be-a8615336383d.herokuapp.com",
-  "https://shorten.ivanderlich.com",
-  "https://shortenivanderlich.vercel.app",
-];
+// const allowedOrigins = [
+//   // The api docs will be accessible from these origins to send requests
+//   "https://localhost:3000",
+//   "https://shorten.ivanderlich.com",
+//   "https://shortenivanderlich.vercel.app",
+// ];
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    // If no origin is provided (like when requests are from same origin or Postman), allow it
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true); // Allow this origin
-    } else {
-      callback(new Error("Not allowed by CORS")); // Deny the request
-    }
-  },
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-};
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     // If no origin is provided (like when requests are from same origin or Postman), allow it
+//     // console.log("Origin: ", origin);
+//     if (!origin) return callback(null, true);
+//     if (allowedOrigins.includes(origin)) {
+//       // console.log("Allowed origin: ", origin);
+//       callback(null, true); // Allow this origin
+//     } else {
+//       // console.log("Not allowed origin: ", origin);
+//       callback(new Error("Not allowed by CORS")); // Deny the request
+//     }
+//   },
+//   methods: ["GET", "POST"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+// };
 
 const app = express();
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 app.use(express.json());
 
@@ -45,6 +48,7 @@ const Url = mongoose.model("Url", urlSchema);
 // Route to create a shortened URL
 app.post("/", async (req, res) => {
   try {
+    console.log("Request body: ", req.body);
     const { nanoid } = await import("nanoid");
 
     const { originalUrl } = req.body;
