@@ -1,0 +1,29 @@
+{
+  "name": "linkshortener",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A full-stack URL shortener application",
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./front-end\" --filter \"./back-end\" dev",
+    "start": "pnpm --parallel --filter \"./front-end\" --filter \"./back-end\" start",
+    "build": "pnpm --filter \"./front-end\" build",
+    "install:all": "pnpm install",
+    "clean": "pnpm -r exec rm -rf node_modules && rm -rf node_modules",
+    "docker:mongodb": "docker compose up mongodb",
+    "docker:backend": "docker compose up backend",
+    "docker:frontend": "docker compose up frontend"
+  },
+  "keywords": [
+    "url-shortener",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "Ivan Derlich",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0",
+    "pnpm": ">=7.0.0"
+  }
+}

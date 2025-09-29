@@ -8,18 +8,18 @@ services:
       - mongo_data:/data/db
 
   backend:
-    build: ./be
+    build: ./back-end
     container_name: url_shortener_backend
     ports:
       - "3000:3000"
     depends_on:
       - mongodb
     environment:
-      - DATABASE_CONNECTION_STRING=mongodb://mongodb:27017/urlshortener
-      - PORT=3000
+    - DATABASE_CONNECTION_STRING=mongodb://mongodb:27017/urlshortener
+    - PORT=3000
 
   frontend:
-    build: ./fe
+    build: ./front-end
     container_name: url_shortener_frontend
     ports:
       - "8080:8080"
