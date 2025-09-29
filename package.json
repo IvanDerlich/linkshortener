@@ -11,7 +11,8 @@
     "clean": "pnpm -r exec rm -rf node_modules && rm -rf node_modules",
     "docker:mongodb": "docker compose up mongodb",
     "docker:backend": "docker compose up backend",
-    "docker:frontend": "docker compose up frontend"
+    "docker:frontend": "docker compose up frontend",
+    "docker:all": "docker compose down && docker compose up --build"
   },
   "keywords": [
     "url-shortener",

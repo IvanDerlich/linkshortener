@@ -13,13 +13,10 @@ const allowedOrigins = [
 const corsOptions = {
   origin: function (origin, callback) {
     // If no origin is provided (like when requests are from same origin or Postman), allow it
-    console.log("Origin: ", origin);
     if (!origin) return callback(null, true);
     if (allowedOrigins.includes(origin)) {
-      // console.log("Allowed origin: ", origin);
       callback(null, true); // Allow this origin
     } else {
-      // console.log("Not allowed origin: ", origin);
       callback(new Error("Not allowed by CORS")); // Deny the request
     }
   },
@@ -64,7 +61,7 @@ app.post("/", async (req, res) => {
     await newUrl.save();
     res.json({
       originalUrl,
-      shortUrl: `http://localhost:3000/${shortId}`,
+      shortUrl: `http://localhost:8080/${shortId}`,
     });
   } catch (error) {
     console.log("error: ", error);
