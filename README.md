@@ -27,6 +27,7 @@ cd linkshortener
 ### 3. **Environment Variables Setup**
 
 You only need to set up environment variables in the **backend folder**. Create a `.env` file in the `back-end` directory.
+There's no need to create other .env files in the frontend folder or in the root of the project.
 For example:
 
 ```bash
