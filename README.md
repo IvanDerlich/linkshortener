@@ -1,6 +1,6 @@
 # 🔗 URL Shortener
 
-<p id="description-urlshortener"> A full-stack application that provides an interface for shortening long URLs. Simply paste a link and get a shortened version instantly. <p>
+<p id="description-linkshortener"> A full-stack application that provides an interface for shortening long URLs. Simply paste a link and get a shortened version instantly. <p>
 
 ### Example
 
@@ -107,7 +107,7 @@ mongosh mongodb://localhost:27017/urlshortener
 
 ## 🛠️ Tech Stack
 
-<ul id="tech-list-urlshortener">
+<ul id="tech-list-linkshortener">
   <li>Node.js</li>
   <li>Express.js</li>
   <li>React.js</li>
