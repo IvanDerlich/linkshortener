@@ -2,11 +2,7 @@
 
 <p id="description-urlshortener"> A full-stack application that provides an interface for shortening long URLs. Simply paste a link and get a shortened version instantly. <p>
 
-## ✨ Features
-
-- **URL Shortening**: Convert long URLs into short, manageable links
-
-### Frontend
+### Example
 
 <img src="docs/1.gif" alt="Backend Demo" />
 
@@ -155,4 +151,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-_Built with ❤️ for you using React, Node, Express and other modern web technologies_
+_Built with ❤️ for you_
