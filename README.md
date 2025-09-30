@@ -116,7 +116,7 @@ mongosh mongodb://localhost:27017/urlshortener
   <li>Swagger</li>
   <li>Docker</li>
   <li>Docker Compose</li>
-  <li>pnpm (Package Manager)</li>
+  <li>pnpm</li>
   <li>Axios</li>
   <li>React Router Dom</li>
 </ul>
