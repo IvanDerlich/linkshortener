@@ -28,7 +28,18 @@ cd linkshortener
 - **Docker CLI** (includes Docker Compose): [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/) - Install the CLI tools, not Docker Desktop
 - **pnpm**: Follow the official installation guide: [https://pnpm.io/installation](https://pnpm.io/installation)
 
-### 3. **Choose your preferred way to run the application:**
+### 3. **Environment Variables Setup**
+
+You only need to set up environment variables in the **backend folder**. Create a `.env` file in the `back-end` directory.
+For example:
+
+```bash
+# back-end/.env
+DATABASE_CONNECTION_STRING=mongodb://localhost:27017/urlshortener
+PORT=3000
+```
+
+### 4. **Choose your preferred way to run the application:**
 
 ## **Option 1: Complete Automated Setup (Recommended)**
 
@@ -123,9 +134,24 @@ This project uses **pnpm** (performant npm) instead of npm for several key advan
 - **🏗️ Monorepo support** - Built-in workspace management for frontend and backend
 - **🔒 Stricter dependency resolution** - Prevents phantom dependencies
 
+## 🐛 Troubleshooting
+
+If you encounter any issues while setting up or running the application:
+
+📧 **Email**: [a@ivanderlich.com](mailto:a@ivanderlich.com)  
+🐛 **Issues**: [https://github.com/IvanDerlich/linkshortener/issues](https://github.com/IvanDerlich/linkshortener/issues)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## 👨‍💻 Author
 
-**[Ivan Derlich](https://ivanderlich.com)** - Full Stack Developer
+**Ivan Derlich - Full Stack Developer**
+
+- 🌐 **Website**: [ivanderlich.com](https://ivanderlich.com)
+- 📧 **Email**: [a@ivanderlich.com](mailto:a@ivanderlich.com)
+- 💼 **LinkedIn**: [Ivan Derlich](https://linkedin.com/in/ivanderlich)
 
 ---
 
