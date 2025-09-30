@@ -12,7 +12,8 @@
     "docker:mongodb": "docker compose up mongodb",
     "docker:backend": "docker compose up backend",
     "docker:frontend": "docker compose up frontend",
-    "docker:all": "docker compose down && docker compose up --build"
+    "docker:all": "docker compose down && docker compose up --build",
+    "docker:db": "docker compose down && docker compose up mongodb"
   },
   "keywords": [
     "url-shortener",

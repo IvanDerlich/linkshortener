@@ -39,7 +39,7 @@ This guide shows how to install and run the Link Shortener application using pnp
 
 5. **Access the application**
 
-   - **Frontend**: [http://localhost:8080](http://localhost:8080)
+   - **Frontend**: [http://localhost:80](http://localhost:8080)
    - **Backend API**: [http://localhost:3000](http://localhost:3000)
    - **API Documentation (Swagger)**: [http://localhost:3000/api/](http://localhost:3000/api/)
 

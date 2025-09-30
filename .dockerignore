@@ -1,0 +1,8 @@
+node_modules
+*.log
+.git
+.gitignore
+coverage
+.cache
+INSTALL-DOCKER.md
+INSTALL-PNPM.md

@@ -5,25 +5,21 @@ WORKDIR /app
 # Install pnpm
 RUN npm install -g pnpm
 
-# Copy workspace files from parent directory
-COPY ../pnpm-workspace.yaml ../pnpm-lock.yaml ./
+# Install serve globally with npm (simpler than pnpm setup)
+RUN npm install -g serve
 
-# Copy frontend package.json
-COPY package.json ./front-end/
+# Copy workspace files
+COPY . .
 
-# Install dependencies using pnpm
-RUN pnpm install --frozen-lockfile
 
-# Install serve globally
-RUN pnpm add -g serve
+# Install dependencies using pnpm (including dev dependencies for build)
+RUN pnpm install --frozen-lockfile --include-workspace-root
 
-# Copy source code
-COPY . ./front-end/
-
-# Build the app using pnpm
-RUN pnpm --filter fe build
+# Change to frontend directory and build
+# WORKDIR /app/front-end
+RUN pnpm --filter front-end build
 
 EXPOSE 8080
 
 # Use pnpm to serve the app
-CMD ["pnpm", "--filter", "fe", "serve"]
+CMD ["pnpm", "--filter", "front-end", "serve"]

@@ -7,6 +7,7 @@ const cors = require("cors");
 
 const allowedOrigins = [
   // The api docs will be accessible from these origins to send requests
+  "http://localhost:3000",
   "http://localhost:8080",
 ];
 
@@ -43,7 +44,6 @@ const Url = mongoose.model("Url", urlSchema);
 // Route to create a shortened URL
 app.post("/", async (req, res) => {
   try {
-    console.log("Request body: ", req.body);
     const { nanoid } = await import("nanoid");
 
     const { originalUrl } = req.body;
@@ -52,7 +52,7 @@ app.post("/", async (req, res) => {
     if (existingUrl) {
       return res.json({
         originalUrl,
-        shortUrl: `http://localhost:3000/${existingUrl.shortId}`,
+        shortUrl: `http://localhost:8080/${existingUrl.shortId}`,
       });
     }
     const shortId = nanoid(7); // Create a short ID with 7 characters
