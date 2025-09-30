@@ -88,7 +88,7 @@ app.get("/:shortId", async (req, res) => {
   }
 });
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 mongoose
   .connect(process.env.DATABASE_CONNECTION_STRING)

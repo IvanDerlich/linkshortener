@@ -4,16 +4,14 @@
   "private": true,
   "description": "A full-stack URL shortener application",
   "scripts": {
-    "dev": "pnpm --parallel --filter \"./front-end\" --filter \"./back-end\" dev",
-    "start": "pnpm --parallel --filter \"./front-end\" --filter \"./back-end\" start",
-    "build": "pnpm --filter \"./front-end\" build",
-    "install:all": "pnpm install",
-    "clean": "pnpm -r exec rm -rf node_modules && rm -rf node_modules",
-    "docker:mongodb": "docker compose up mongodb",
-    "docker:backend": "docker compose up backend",
-    "docker:frontend": "docker compose up frontend",
+    "start": "pnpm docker:db && pnpm --parallel --filter \"./front-end\" --filter \"./back-end\" start",
+    "serve": "pnpm docker:db && pnpm --parallel --filter \"./front-end\" --filter \"./back-end\" serve",
+    "bootstrap": "pnpm setup-and-install && pnpm start",
+    "build-and-serve": "pnpm setup-and-install && pnpm --filter \"./front-end\" build && pnpm serve",
+    "setup-and-install": "pnpm clean &&  pnpm install --frozen-lockfile",
+    "clean": "rm -rf back-end/node_modules && rm -rf front-end/node_modules && rm -rf node_modules",
     "docker:all": "docker compose down && docker compose up --build",
-    "docker:db": "docker compose down && docker compose up mongodb"
+    "docker:db": "docker compose down && docker compose up mongodb -d"
   },
   "keywords": [
     "url-shortener",
